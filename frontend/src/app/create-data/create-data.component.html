@@ -1,0 +1,34 @@
+<h3>Create Data</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Jumlah Liter</label>
+      <input type="number" class="form-control" 
+      id="jumlahLiter" required 
+      [(ngModel)]="data.jumlahLiter" name="jumlahLiter">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Premium</label>
+      <input type="number" class="form-control" 
+      id="premium" required 
+      [(ngModel)]="data.premium" name="premium">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Pertalite</label>
+      <input type="number" class="form-control" 
+      id="pertalite" required [(ngModel)]="data.pertalite"
+       name="pertalite">
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-danger">
+      Submit
+    </button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Successfully submitted!</h4>
+  <button type="button" class="btn btn-primary" (click)="resetForm()">Add</button>
+</div>
