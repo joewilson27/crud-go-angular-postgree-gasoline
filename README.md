@@ -7,11 +7,11 @@ node
 npm
 angular/cli
 
-# install npm on frontend directory:
+install npm on frontend directory:
 npm install
 
 run backend:
 - open command line in backend dir, then type: go run main.go
 
-fun frontend:
+run frontend:
 - open command line in frontend dir, then type: ng serve
